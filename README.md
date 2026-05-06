@@ -3,10 +3,6 @@
 This repository contains the code for the paper
 [_Beyond Distance: Quantifying Point Cloud Dynamics with Persistent Homology and Dynamic Optimal Transport_](https://arxiv.org/abs/2603.15683).
 
-It is organized as a cleaned, reproducibility-focused derivative of
-[`zsteve/tpot`](https://github.com/zsteve/tpot).
-
-
 
 
 ## Repository Layout
@@ -28,9 +24,8 @@ It is organized as a cleaned, reproducibility-focused derivative of
 Clone the repository and initialize the upstream dependencies:
 
 ```bash
-git clone <your-repo-url>
-cd tpot_synthetic
-git submodule update --init --recursive
+git clone https://github.com/YixinWang0126/Point_Cloud_Dynamics.git
+cd Point_Cloud_Dynamics
 ```
 
 Create a Python environment and install the common dependencies used by the
@@ -55,7 +50,8 @@ Julia is also required for `tools/topf`.
 
 This repository does not redistribute the original datasets.
 
-- Put the D'Orsogna CSV file at `data/dorsogna/dorsogna.csv`
+- Put the D'Orsogna CSV file at `data/dorsogna/dorsogna.csv` (accessible from the
+  [D'Orsogna dataset Dryad page](https://datadryad.org/dataset/doi:10.5061/dryad.91j93#citations))
 - Put the stroke dataset under `data/stroke/raw/`
 
 See [data/README.md] for the expected layout.
@@ -78,7 +74,7 @@ Then open the notebooks in:
 
 ## Provenance and Attribution
 
-This repository combines local experiment code with upstream research software.
+This repository combines local experiment code with upstream reprositories.
 
 The current codebase should be understood as follows:
 
@@ -97,7 +93,7 @@ The current codebase should be understood as follows:
 This repository adds its own repository-level organization and local code:
 
 - `experiments/`
-  Reorganized experiment notebooks for the paper
+  Experiment notebooks for the paper
 
 - `src/`
   Local wrappers and shared helper code used by the notebooks in this repository
@@ -119,8 +115,7 @@ applies to local TPOT-related wrappers and helper code such as:
 - `src/topo_util.py`
 - `src/topfmain.py`
 
-Upstream code under `tools/` remains attributable to its original authors and
-retains its own license files.
+
 
 ## Citation
 
